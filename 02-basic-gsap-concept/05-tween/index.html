@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tween</title>
+  </head>
+  <body>
+    <svg width="900" height="650">
+      <rect
+        class="rect"
+        x="350"
+        y="250"
+        width="100"
+        height="100"
+        fill="purple"
+        stroke="cyan"
+      />
+
+      <rect
+        class="rect"
+        x="550"
+        y="250"
+        width="100"
+        height="100"
+        fill="purple"
+        stroke="cyan"
+      />
+    </svg>
+
+    <script src="../../gsap/minified/gsap.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        gsap.to(".rect", {
+          duration: 3,
+          delay: 1,
+          rotate: 2880,
+          skewX: 45,
+          fill: "yellow",
+          stroke: "red",
+          ease: "power1.in",
+        });
+      });
+    </script>
+  </body>
+</html>

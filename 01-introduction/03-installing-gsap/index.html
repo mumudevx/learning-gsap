@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Installing GSAP</title>
+  </head>
+  <body>
+    <div
+      class="box"
+      style="width: 150px; height: 150px; background-color: burlywood"
+    ></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        gsap.registerEffect({
+          name: "fade",
+          effect: (targets, config) => {
+            return gsap.to(targets, { duration: config.duration, opacity: 0 });
+          },
+          defaults: { duration: 2 },
+          extendTimeline: true,
+        });
+
+        gsap.effects.fade(".box");
+      });
+    </script>
+  </body>
+</html>
