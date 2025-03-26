@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Common Methods For Tween</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Common Methods For Creating A Tween</h1>
+
+    <div id="b" class="circle">
+      <p>gsap.to()</p>
+    </div>
+
+    <div id="g" class="circle">
+      <p>gsap.from()</p>
+    </div>
+
+    <div id="r" class="circle">
+      <p>gsap.fromTo()</p>
+    </div>
+
+    <script src="gsap.min.js"></script>
+    <script>
+      gsap.to("#b", {
+        duration: 3,
+        delay: 2,
+        x: 700,
+        repeat: -1,
+      });
+
+      gsap.from("#g", {
+        duration: 3,
+        delay: 2,
+        x: 700,
+        repeat: -1,
+      });
+
+      gsap.fromTo(
+        "#r",
+        {
+          x: 300,
+        },
+        {
+          duration: 3,
+          delay: 2,
+          x: 700,
+          repeat: -1,
+        }
+      );
+    </script>
+    <script></script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Installing GSAP</title>
+
+    <style>
+      .cube {
+        height: 150px;
+        width: 150px;
+        background-color: indigo;
+      }
+    </style>
+  </head>
+
+  <div class="cube"></div>
+
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script>
+      gsap.fromTo(
+        ".cube",
+        {
+          opacity: 0,
+          x: 0,
+          y: 0,
+        },
+        {
+          duration: 2,
+          opacity: 1,
+          x: 100,
+          y: 100,
+        }
+      );
+    </script>
+  </body>
+</html>
